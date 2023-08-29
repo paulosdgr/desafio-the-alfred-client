@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --color-red: #ff1510;
+  --color-red-light: #fa7c7c;
+  --color-red-lighter: #fdecec;
+  --color-green: #e7f6e7;
+
+  --color-black: #000;
+  --color-dark-gray: #404040;
+  --color-gray: #8c8c8c;
+  --color-light-gray: #b9b9b9;
+  --color-lighter-gray: #e5e5e5;
+  --color-white: #fff;
+}
