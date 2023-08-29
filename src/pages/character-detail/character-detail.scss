@@ -1,0 +1,219 @@
+.c-character-detail-container {
+    width: 100vw;
+    background-color: var(--color-green);
+    position: relative;
+    overflow-x: hidden;
+    padding: 36px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__hero-background {
+        font-size: 500px;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 900;
+        position: absolute;
+        left: 50px;
+        z-index: 0;
+        top: 150px;
+        text-shadow: 0 0 20px 20px rgba(130, 238, 127, 0.15);
+        text-transform: uppercase;
+    }
+}
+
+.c-character-detail-header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    &__logo {
+        height: 100px;
+    }
+
+    & .search-bar {
+        width: 100%;
+        max-width: 500px;
+        margin-top: 24px;
+    }
+}
+
+.c-character-detail-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 80px;
+    z-index: 10;
+    &__left {
+        width: 360px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > h1 {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--color-dark-gray);
+            text-transform: uppercase;
+        }
+
+        & .checkbox__icon {
+            height: 36px;
+            width: 36px;
+        }
+    }
+
+    &__description {
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--color-gray);
+        margin-top: 24px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-dark-gray);
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            & > div {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                align-items: center;
+
+                & > img {
+                    height: 36 px;
+                }
+            }
+        }
+    }
+}
+
+.c-character-detail-comics {
+    padding: 20px 80px;
+    margin-bottom: 96px;
+    z-index: 10;
+    & > h1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 64px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(6, 150px);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 50px;
+        column-gap: calc((100% - 960px) / 5);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        height: 300px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        & > img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        & > p {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-dark-gray);
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.c-character-detail-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--color-red);
+    z-index: 10;
+}
+
+@media screen and (max-width: 1200px) {
+    .c-character-detail-container {
+        padding: 36px 24px;
+    }
+
+    .c-character-detail-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .c-character-detail-content {
+        flex-direction: column;
+        gap: 24px;
+        padding: 12px 12px;
+        &__left {
+            width: 100%;
+        }
+
+        &__title {
+            gap: 12px;
+            & > h1 {
+                font-size: 24px;
+            }
+
+            & .checkbox__icon {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        &__description {
+            font-size: 18px;
+        }
+
+        &__right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & > img {
+                width: 340px;
+            }
+        }
+    }
+
+    .c-character-detail-comics {
+        padding: 20px 12px;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+}
