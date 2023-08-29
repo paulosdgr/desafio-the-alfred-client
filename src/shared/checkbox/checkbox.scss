@@ -1,0 +1,27 @@
+.checkbox {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    & > input {
+        display: none;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../../assets/icons/heart-outline.svg');
+    }
+
+    &--checked &__icon {
+        background-image: url('../../assets/icons/heart.svg');
+    }
+
+    &:active &__icon {
+        background-image: url('../../assets/icons/heart-active.svg');
+    }
+}
