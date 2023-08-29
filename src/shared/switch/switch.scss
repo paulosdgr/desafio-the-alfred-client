@@ -1,0 +1,33 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    background-color: var(--color-lighter-gray);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &__slider {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-red);
+        border-radius: 50%;
+        box-shadow: 0 -2px 4px #ff151040;
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+    }
+
+    &--checked &__slider {
+        transform: translateX(24px);
+        box-shadow: 0 2px 4px #ff151040;
+    }
+
+    & > input {
+        visibility: hidden;
+    }
+}
