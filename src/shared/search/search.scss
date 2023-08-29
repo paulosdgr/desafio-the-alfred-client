@@ -1,0 +1,59 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--color-white);
+    padding: 8px;
+    gap: 16px;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+
+    &__input {
+        background: none;
+        border: none;
+        flex: 1;
+        font-weight: 600;
+        padding: 6px;
+        font-size: 16px;
+        color: var(--color-dark-gray);
+        outline: none;
+
+        &::placeholder {
+            color: var(--color-light-gray);
+        }
+    }
+
+    &__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    &__icon {
+        background-image: url('../../assets/icons/magnifier.svg');
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin-left: 1rem;
+    }
+
+    &--dark {
+        background-color: var(--color-red-lighter);
+        color: var(--color-red);
+
+        .search-bar__input::placeholder {
+            color: var(--color-red-light);
+        }
+
+        .search-bar__input {
+            color: var(--color-red);
+        }
+
+        .search-bar__icon {
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
